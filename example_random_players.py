@@ -1,6 +1,13 @@
 import soccer_twos
+from soccer_twos.package import TRAINING_ENV_PATH
 
-env = soccer_twos.make(render=True)
+if TRAINING_ENV_PATH.endswith(".app/Contents/MacOS/UnityEnvironment"):
+    fixed_path = TRAINING_ENV_PATH.replace(".app/Contents/MacOS/UnityEnvironment", ".app")
+else:
+    fixed_path = TRAINING_ENV_PATH
+
+env = soccer_twos.make(render=True, env_path=fixed_path)
+
 print("Observation Space: ", env.observation_space.shape)
 print("Action Space: ", env.action_space)
 

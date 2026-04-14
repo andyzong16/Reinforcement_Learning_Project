@@ -9,9 +9,7 @@ class RLLibWrapper(gym.core.Wrapper, MultiAgentEnv):
     """
     A RLLib wrapper so our env can inherit from MultiAgentEnv.
     """
-
-    pass
-
+        
 
 def create_rllib_env(env_config: dict = {}):
     """
