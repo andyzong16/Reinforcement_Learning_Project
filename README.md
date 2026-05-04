@@ -1,7 +1,7 @@
 # Soccer-Twos — TEAM39 Agent
 
 **Team Name:** TEAM39AGENT  
-**Members:** Andy Ningan Zong (`nzong8@gatech.edu`) · Alireza Moradi (`amoradi30@gatech.edu`)  
+**Members:** Alireza Moradi (`amoradi30@gatech.edu`) . Andy Ningan Zong (`nzong8@gatech.edu`)  
 **Course:** Georgia Tech — College of Computing  
 **Competition:** CoRL 2026 Soccer-Twos Reinforcement Learning Challenge
 
