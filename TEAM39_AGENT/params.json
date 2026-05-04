@@ -1,0 +1,55 @@
+{
+  "batch_mode": "complete_episodes",
+  "clip_param": 0.2,
+  "entropy_coeff": 0.008,
+  "env": "SoccerVsCeia",
+  "env_config": {
+    "base_port": 18920,
+    "flatten_branched": true,
+    "imitation_teacher_fn": "<function ceia_teacher_flat_action at 0x1554bd99f3a0>",
+    "multiagent": false,
+    "num_envs_per_worker": 1,
+    "opponent_policy": "<function ceia_opponent_policy at 0x1554bd99f550>",
+    "reward_config": {
+      "approach_ball_coef": 0.025,
+      "ball_progress_coef": 0.1,
+      "behind_ball_coef": 0.012,
+      "defense_shape_coef": 0.016,
+      "ideal_max_spacing": 8.0,
+      "ideal_min_spacing": 2.0,
+      "imitation_coef": 0.035,
+      "imitation_mismatch_penalty": 0.0,
+      "max_abs_dense_reward_per_agent": 0.26,
+      "own_goal_danger_coef": 0.025,
+      "spacing_coef": 0.005,
+      "step_penalty": 0.0005,
+      "touch_ball_coef": 0.014,
+      "touch_distance": 1.6
+    },
+    "single_player": true,
+    "use_custom_reward": true,
+    "variation": "EnvType.team_vs_policy"
+  },
+  "framework": "torch",
+  "gamma": 0.99,
+  "grad_clip": 0.5,
+  "lambda": 0.95,
+  "log_level": "INFO",
+  "lr": 0.0003,
+  "model": {
+    "fcnet_activation": "relu",
+    "fcnet_hiddens": [
+      512,
+      512
+    ],
+    "vf_share_layers": true
+  },
+  "num_envs_per_worker": 1,
+  "num_gpus": 0,
+  "num_sgd_iter": 10,
+  "num_workers": 1,
+  "rollout_fragment_length": 2000,
+  "sgd_minibatch_size": 1000,
+  "train_batch_size": 4000,
+  "vf_loss_coeff": 3.0
+}
